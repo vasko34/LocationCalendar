@@ -69,6 +69,9 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
                     return
                 }
             }
+            if textViewContainer.isHidden == false {
+                textViewContainer.isHidden = true
+            }
             newDay.locations.append(newLocation)
             days.insert(newDay, at: 0)
             saveDaysData()
