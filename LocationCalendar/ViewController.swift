@@ -66,6 +66,7 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
                     day.locations.append(newLocation)
                     saveDaysData()
                     tableView.reloadData()
+                    print(days[0].locations.count)
                     return
                 }
             }
@@ -75,8 +76,7 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
             newDay.locations.append(newLocation)
             days.insert(newDay, at: 0)
             saveDaysData()
-            let indexPath = IndexPath(row: 0, section: 0)
-            tableView.insertRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
         }
     }
     
