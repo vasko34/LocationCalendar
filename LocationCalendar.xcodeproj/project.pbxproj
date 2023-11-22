@@ -13,6 +13,9 @@
 		CE04D0A32B0CCEE600543C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE04D0A12B0CCEE600543C94 /* Main.storyboard */; };
 		CE04D0A52B0CCEE800543C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE04D0A42B0CCEE800543C94 /* Assets.xcassets */; };
 		CE04D0A82B0CCEE800543C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE04D0A62B0CCEE800543C94 /* LaunchScreen.storyboard */; };
+		CE04D0B02B0CCF3200543C94 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D0AF2B0CCF3200543C94 /* MapViewController.swift */; };
+		CE04D0B42B0CD1C900543C94 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D0B32B0CD1C900543C94 /* Day.swift */; };
+		CE04D0B62B0CDD5800543C94 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04D0B52B0CDD5800543C94 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CE04D0A42B0CCEE800543C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE04D0A72B0CCEE800543C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE04D0A92B0CCEE800543C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE04D0AF2B0CCF3200543C94 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE04D0B32B0CD1C900543C94 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		CE04D0B52B0CDD5800543C94 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				CE04D09B2B0CCEE600543C94 /* AppDelegate.swift */,
 				CE04D09D2B0CCEE600543C94 /* SceneDelegate.swift */,
 				CE04D09F2B0CCEE600543C94 /* ViewController.swift */,
+				CE04D0AF2B0CCF3200543C94 /* MapViewController.swift */,
+				CE04D0B32B0CD1C900543C94 /* Day.swift */,
+				CE04D0B52B0CDD5800543C94 /* Location.swift */,
 				CE04D0A12B0CCEE600543C94 /* Main.storyboard */,
 				CE04D0A42B0CCEE800543C94 /* Assets.xcassets */,
 				CE04D0A62B0CCEE800543C94 /* LaunchScreen.storyboard */,
@@ -141,6 +150,9 @@
 				CE04D0A02B0CCEE600543C94 /* ViewController.swift in Sources */,
 				CE04D09C2B0CCEE600543C94 /* AppDelegate.swift in Sources */,
 				CE04D09E2B0CCEE600543C94 /* SceneDelegate.swift in Sources */,
+				CE04D0B42B0CD1C900543C94 /* Day.swift in Sources */,
+				CE04D0B62B0CDD5800543C94 /* Location.swift in Sources */,
+				CE04D0B02B0CCF3200543C94 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +307,14 @@
 				DEVELOPMENT_TEAM = 3KLAPSG7T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationCalendar/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to track your location in order to fill up the calendar.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to track your location in order to fill up the calendar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to track your location in order to fill up the calendar.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +338,14 @@
 				DEVELOPMENT_TEAM = 3KLAPSG7T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationCalendar/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to track your location in order to fill up the calendar.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to track your location in order to fill up the calendar.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to track your location in order to fill up the calendar.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
