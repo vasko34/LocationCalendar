@@ -18,7 +18,7 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()
         locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.startUpdatingLocation()
+        locationManager?.startMonitoringSignificantLocationChanges()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
